@@ -1,14 +1,21 @@
 import os
+import random
 from pathlib import Path
+
+import numpy as np
 from dotenv import load_dotenv
 
-from langchain_community.document_loaders import TextLoader, PyPDFLoader
+from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 
 load_dotenv()
+
+SEED = 42
+random.seed(SEED)
+np.random.seed(SEED)
 
 DATA_DIR = os.getenv("DATA_DIR", "data")
 CHROMA_DB_DIR = os.getenv("CHROMA_DB_DIR", "chroma_db")
@@ -18,20 +25,23 @@ def load_documents(data_dir: str):
     documents = []
 
     for file_path in Path(data_dir).glob("*"):
-        if file_path.suffix.lower() == ".md" or file_path.suffix.lower() == ".txt":
-            loader = TextLoader(str(file_path), encoding="utf-8")
-            docs = loader.load()
-        elif file_path.suffix.lower() == ".pdf":
-            loader = PyPDFLoader(str(file_path))
-            docs = loader.load()
-        else:
+        if file_path.suffix.lower() not in [".md", ".txt"]:
             continue
 
-        for doc in docs:
-            doc.metadata["source"] = file_path.name
-            doc.metadata["title"] = file_path.stem.replace("_", " ").title()
+        text = file_path.read_text(encoding="utf-8")
 
-        documents.extend(docs)
+        if not text.strip():
+            continue
+
+        documents.append(
+            Document(
+                page_content=text,
+                metadata={
+                    "source": file_path.name,
+                    "title": file_path.stem.replace("_", " ").title(),
+                },
+            )
+        )
 
     return documents
 
@@ -52,6 +62,11 @@ def build_index():
 
     print(f"Loaded {len(documents)} documents.")
 
+    if not documents:
+        raise ValueError(
+            f"No documents found in {DATA_DIR}. Add .md or .txt policy files before indexing."
+        )
+
     print("Chunking documents...")
     chunks = chunk_documents(documents)
 
@@ -63,13 +78,11 @@ def build_index():
     )
 
     print("Storing chunks in ChromaDB...")
-    vectorstore = Chroma.from_documents(
+    Chroma.from_documents(
         documents=chunks,
         embedding=embeddings,
         persist_directory=CHROMA_DB_DIR,
     )
-
-    vectorstore.persist()
 
     print("Indexing complete.")
 
