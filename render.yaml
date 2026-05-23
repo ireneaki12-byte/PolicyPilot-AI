@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: policypilot-ai
+    env: python
+    buildCommand: "pip install -r requirements.txt && python app/ingest.py"
+    startCommand: "gunicorn app.main:app"
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        value: llama3-8b-8192
+      - key: CHROMA_DB_DIR
+        value: chroma_db
+      - key: DATA_DIR
+        value: data

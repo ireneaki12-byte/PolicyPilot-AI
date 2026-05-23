@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template_string, url_for
-from rag_pipeline import answer_question
+from app.rag_pipeline import answer_question
 
 app = Flask(__name__)
 

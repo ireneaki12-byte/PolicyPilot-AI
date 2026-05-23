@@ -1,9 +1,9 @@
 import sys
 from pathlib import Path
 
-sys.path.append(str(Path(__file__).resolve().parents[1] / "app"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from main import app
+from app.main import app
 
 
 def test_health_endpoint():
