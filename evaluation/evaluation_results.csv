@@ -1,0 +1,186 @@
+id,question,gold_answer,generated_answer,expected_source,retrieved_sources,citation_match_auto,latency_seconds,groundedness_manual_score,citation_accuracy_manual_score
+1,Who is responsible for overseeing data protection matters?,The Data Protection Officer is responsible for overseeing data protection matters and monitoring compliance.,"Answer:
+The Data Protection Officer (DPO) is responsible for overseeing data protection matters.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+
+Relevant Snippets:
+- ""The Data Protection Officer (DPO) shall be responsible for ensuring compliance with the Data Protection Act and this policy. The DPO shall be the primary point of contact for data protection matters within the organization."" 
+  (Source: Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020))",data_protection_policy.md,[],False,22.663317918777466,,
+2,What should an employee do if they suspect a personal data breach?,They should immediately report it to the DPO and preserve evidence relating to the possible breach.,"Answer:
+If an employee suspects a personal data breach, they should immediately report it to the Data Protection Officer (DPO) or the IT department.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Policy Corpus (KALPC-001)
+
+Relevant Snippets:
+- ""In the event of a suspected data breach, the employee shall notify the DPO or the IT department immediately."" 
+- ""The DPO or the IT department shall investigate the breach and take necessary actions to mitigate its effects."" 
+(KALPC-001, Section 5.3)",data_breach_policy_and_procedures.md,[],False,10.06867527961731,,
+3,Within how long should a reportable breach be notified to the Data Commissioner?,A reportable personal data breach should be notified to the Data Commissioner within 72 hours of becoming aware of the breach.,"Answer:
+Within 72 hours of becoming aware of a reportable breach, a notification should be made to the Data Commissioner.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Policy Corpus (Data Protection Policy Document)
+
+Relevant Snippets:
+- ""In the event of a reportable breach, the Data Protection Officer shall notify the Data Commissioner within 72 hours of becoming aware of the breach. This notification shall include the nature of the breach, the number of individuals affected, and any measures taken to mitigate the breach."" (Data Protection Policy Document, Section 5.3)",data_breach_policy_and_procedures.md,[],False,10.962176084518433,,
+4,What are examples of personal data collected by the airline?,"Examples include name, ID number, date of birth, phone number, postal address, location data, IP address, account details, photos, and biometrics.","Answer:
+Examples of personal data collected by the airline include passenger names, contact information, travel documents, and health information.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+
+Relevant Snippets:
+- ""Personal data collected by the airline includes, but is not limited to, passenger names, contact information, travel documents, and health information."" 
+  (Source: Data Protection Policy Document, Section 3.1)",data_protection_policy.md,[],False,10.858627557754517,,
+5,What are the data protection principles?,"The principles include lawfulness, fairness, transparency, purpose limitation, data minimization, accuracy, storage limitation, security, transfer limitation, data subject rights, and accountability.","Answer:
+The data protection principles are based on the General Data Protection Regulation (GDPR) and are applicable to Kenya Aviation Limited.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Policy Corpus (KALPC-001)
+
+Relevant Snippets:
+- ""Kenya Aviation Limited is committed to protecting the personal data of its customers, employees, and other stakeholders. The company adheres to the following data protection principles: 
+  1. Lawfulness, fairness, and transparency
+  2. Purpose limitation
+  3. Data minimization
+  4. Accuracy
+  5. Storage limitation
+  6. Integrity and confidentiality
+  7. Accountability"" 
+  (Source: KALPC-001, Section 3.1)",data_protection_policy.md,[],False,11.114314794540405,,
+6,What is the timeline for responding to a data subject access request?,A right of access request should be answered within 7 days of receiving a verifiable request.,"Answer:
+The timeline for responding to a data subject access request is 30 days from the date of receipt of the request.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+
+Relevant Snippets:
+- ""All requests for access to personal data must be responded to within 30 days of receipt of the request. This timeframe may be extended by a further 60 days in exceptional circumstances."" 
+  (Source: Data Protection Policy, Section 5.3, Kenya Aviation Limited Data Protection Policy Document (2020))",data_subject_rights_policy.md,[],False,11.389793157577515,,
+7,What is the timeline for responding to a request for erasure?,A request for erasure should be answered within 14 days of receiving a verifiable request.,"Answer:
+The timeline for responding to a request for erasure is not explicitly stated in the provided policy context.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+
+Relevant Snippets:
+- None",data_subject_rights_policy.md,[],False,9.83431100845337,,
+8,What is the timeline for data portability requests?,A data portability request should be answered within 30 days of receiving a verifiable request.,"Answer:
+Data portability requests are typically processed within 30 days from the date of receipt.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Policy Corpus (Data Protection Policy.docx)
+
+Relevant Snippets:
+- ""All data portability requests shall be processed within 30 days from the date of receipt. The requestor shall be notified of the outcome in writing."" 
+  (Data Protection Policy.docx, Section 5.3)",data_subject_rights_policy.md,[],False,10.012309551239014,,
+9,What categories of cookies does the website use?,"The website uses strictly necessary cookies, analytical or performance cookies, functionality cookies, targeting cookies, and third-party/social media cookies.","I can only answer based on the Kenya Aviation Limited policy corpus available to me. I could not find this information in the provided policy documents.
+
+However, I can suggest that you may be looking for information related to the Kenya Aviation Limited Cookie Policy. If you have access to the Cookie Policy document, please provide it, and I'll be happy to assist you.
+
+If not, please provide more context or details about the policy you are referring to, and I'll do my best to help.",cookie_policy.md,[],False,11.036606788635254,,
+10,Can personal data be shared informally?,No. Personal data may not be shared informally and access should be formally requested where required.,"Answer:
+No, personal data cannot be shared informally.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+
+Relevant Snippets:
+- ""Personal data shall only be shared formally, in accordance with the procedures outlined in this policy. Informal sharing of personal data is strictly prohibited."" 
+- ""All employees are expected to adhere to this policy and report any instances of informal data sharing to the Data Protection Officer.""",data_protection_policy.md,[],False,10.858955383300781,,
+11,What security measures are required for storing personal data?,"Electronic personal data should be stored securely using measures such as passwords, two-factor authentication, geo-restricted authentication, SSL encryption, or RSA encryption.","Answer:
+Personal data stored by Kenya Aviation Limited must be secured in accordance with the Data Protection Policy. This includes ensuring that access to personal data is restricted to authorized personnel only.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Policy Manual (Section 5.2)
+
+Relevant Snippets:
+- ""Access to personal data shall be restricted to personnel who require such access to perform their duties. All personnel with access to personal data shall be required to sign a confidentiality agreement."" 
+- ""Personal data shall be stored in a secure manner, using encryption and other appropriate security measures to prevent unauthorized access, disclosure, or loss.""",data_protection_policy.md,[],False,10.578935623168945,,
+12,Can employees share passwords?,"No. Passwords should not be written down or shared between employees, agents, contractors, or other parties.","Answer:
+No, employees are not allowed to share passwords.
+
+Citations:
+- Password Policy - Kenya Aviation Limited Password Policy Document (KALPPD-001)
+
+Relevant Snippets:
+- ""Passwords must be kept confidential and not shared with anyone, including colleagues."" 
+- ""Sharing passwords is strictly prohibited and may result in disciplinary action.""",data_protection_policy.md,[],False,10.235267162322998,,
+13,What is the purpose of the Data Retention Policy?,"It establishes guidelines for retaining and disposing records and data in line with legal, regulatory, operational, and business requirements.","Answer:
+The purpose of the Data Retention Policy is to ensure the secure and compliant storage of data within Kenya Aviation Limited.
+
+Citations:
+- Data Retention Policy - Kenya Aviation Limited Policy Corpus
+
+Relevant Snippets:
+- ""The purpose of this policy is to ensure that all data stored by Kenya Aviation Limited is retained securely and in compliance with relevant laws and regulations."" 
+  (Source: Data Retention Policy - Kenya Aviation Limited Policy Corpus)",data_retention_policy.md,[],False,9.234039783477783,,
+14,How should sensitive physical records be disposed of?,"They should be disposed of securely through shredding, secure incineration, or professional data destruction services.","Answer:
+Sensitive physical records should be disposed of by shredding or incineration.
+
+Citations:
+- Document Disposal Policy - Kenya Aviation Limited Policy Corpus (Document Disposal Policy.docx)
+
+Relevant Snippets:
+- ""All sensitive physical records shall be disposed of by shredding or incineration to prevent unauthorized access."" 
+- ""The disposal of sensitive physical records shall be carried out in accordance with the procedures outlined in this policy.""",data_retention_policy.md,[],False,11.667353391647339,,
+15,What must third-party processors do if they experience a breach?,They must immediately notify Kenya Aviation Limited of any data breaches or incidents of non-compliance.,"Answer:
+Third-party processors must notify Kenya Aviation Limited immediately if they experience a breach.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Policy Manual (Section 5.3)
+
+Relevant Snippets:
+- ""In the event of a data breach, the third-party processor shall notify Kenya Aviation Limited immediately."" 
+  - Data Protection Policy - Kenya Aviation Limited Policy Manual (Section 5.3)",data_protection_policy.md,[],False,11.327758073806763,,
+16,What must be done before engaging a third-party processor?,"The company must ensure the processor is suitable, competent, capable, and where possible enter into a controller and processor agreement.","Answer:
+Before engaging a third-party processor, a risk assessment must be conducted to ensure that the third-party processor can meet the required standards and security measures.
+
+Citations:
+- Third-Party Processors Policy - Kenya Aviation Limited Policy Manual (Section 4.2)
+
+Relevant Snippets:
+- ""Prior to engaging a third-party processor, a risk assessment must be conducted to ensure that the third-party processor can meet the required standards and security measures."" 
+  (Source: Kenya Aviation Limited Policy Manual, Section 4.2)",data_protection_policy.md,[],False,11.672101020812988,,
+17,When should a DPIA be conducted?,"A DPIA should be conducted for high-risk processing, major system or business changes involving personal data, automated processing, large-scale sensitive data processing, or systematic monitoring.","Answer:
+A Data Protection Impact Assessment (DPIA) should be conducted when a new project or system is proposed that is likely to result in a high risk to the rights and freedoms of data subjects.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Policy Manual (DPO-001)
+
+Relevant Snippets:
+- ""A DPIA should be conducted for any new project or system that is likely to result in a high risk to the rights and freedoms of data subjects. This includes, but is not limited to, projects that involve the processing of sensitive personal data, or projects that involve the use of new technologies that have the potential to result in a high risk to the rights and freedoms of data subjects."" (DPO-001, Page 12)",data_protection_policy.md,[],False,9.82990312576294,,
+18,What should a privacy notice include?,"It should include the controller and DPO details, processing purposes, lawful basis, data categories, recipients, transfers, retention periods, data subject rights, and complaint rights.","Answer:
+A privacy notice should include information about the types of personal data collected, the purposes for which the data is collected, and how the data will be used, shared, and protected.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+
+Relevant Snippets:
+- ""The privacy notice shall include the following information: 
+  (a) The types of personal data collected; 
+  (b) The purposes for which the data is collected; 
+  (c) How the data will be used; 
+  (d) How the data will be shared; 
+  (e) How the data will be protected."" 
+  (Source: Section 5.2, Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020))",data_protection_policy.md,[],False,10.14992618560791,,
+19,What should happen when a data subject withdraws consent?,"Processing activities based on that consent should stop, relevant departments and third parties should be notified, and records updated.","Answer:
+When a data subject withdraws consent, the data controller shall cease to process the personal data and take reasonable steps to delete or anonymize the data.
+
+Citations:
+- Data Protection Policy - Kenya Aviation Limited Policy Corpus (KALPC-001)
+
+Relevant Snippets:
+- ""In the event of a data subject withdrawing consent, the data controller shall cease to process the personal data and take reasonable steps to delete or anonymize the data."" (KALPC-001, Section 5.3.2)
+- ""The data controller shall ensure that all personal data is processed in accordance with the principles of data protection, including the principle of consent."" (KALPC-001, Section 3.1)",data_subject_request_procedures.md,[],False,9.426885843276978,,
+20,What happens if a question is outside the policy corpus?,The assistant should state that it can only answer based on the Kenya Aviation Limited data protection policy corpus.,"Answer:
+I can only answer based on the Kenya Aviation Limited policy corpus available to me. I could not find this information in the provided policy documents.
+
+Citations:
+- None - [No policy title or source file provided]
+
+Relevant Snippets:
+- None",,[],False,9.212214946746826,,

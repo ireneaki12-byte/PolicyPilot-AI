@@ -32,10 +32,14 @@ HTML_TEMPLATE = """
             --dark: #1A0715;
             --dark-2: #260D20;
             --dark-3: #37122E;
-            --surface: #FAF5FA;
             --text: #FFF7FC;
             --muted: #D8A9C4;
             --white: #FFFFFF;
+        }
+
+        html,
+        body {
+            min-height: 100%;
         }
 
         body {
@@ -44,22 +48,23 @@ HTML_TEMPLATE = """
                 radial-gradient(circle at top left, rgba(255, 221, 0, 0.18), transparent 28%),
                 radial-gradient(circle at top right, rgba(0, 174, 239, 0.16), transparent 30%),
                 linear-gradient(135deg, var(--magenta), var(--purple) 50%, var(--dark));
-            min-height: 100vh;
             color: var(--text);
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 24px;
+            overflow: hidden;
         }
 
         .app-shell {
             width: min(1180px, 100%);
-            height: 720px;
+            height: min(720px, calc(100vh - 48px));
+            min-height: 560px;
             background: rgba(26, 7, 21, 0.94);
             border-radius: 28px;
             overflow: hidden;
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 300px minmax(0, 1fr);
             box-shadow: 0 30px 90px rgba(0, 0, 0, 0.45);
             border: 1px solid rgba(255, 255, 255, 0.16);
         }
@@ -73,6 +78,7 @@ HTML_TEMPLATE = """
             flex-direction: column;
             position: relative;
             overflow: hidden;
+            min-width: 0;
         }
 
         .sidebar::before {
@@ -97,6 +103,7 @@ HTML_TEMPLATE = """
             display: flex;
             align-items: center;
             gap: 12px;
+            min-width: 0;
         }
 
         .brand-icon {
@@ -110,6 +117,7 @@ HTML_TEMPLATE = """
             justify-content: center;
             font-size: 23px;
             box-shadow: 0 10px 25px rgba(255, 221, 0, 0.25);
+            flex-shrink: 0;
         }
 
         .brand-name {
@@ -118,6 +126,9 @@ HTML_TEMPLATE = """
             font-weight: 700;
             letter-spacing: -0.5px;
             color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .brand-tagline {
@@ -131,13 +142,18 @@ HTML_TEMPLATE = """
 
         .mascot-card {
             margin: 10px 18px 18px;
-            background:
-                linear-gradient(180deg, rgba(191, 232, 247, 0.95), rgba(255, 255, 255, 0.9));
             border-radius: 24px;
             padding: 16px;
             position: relative;
             overflow: hidden;
-            min-height: 210px;
+            min-height: 240px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background:
+                radial-gradient(circle at top right, rgba(255, 221, 0, 0.22), transparent 28%),
+                radial-gradient(circle at bottom left, rgba(226, 1, 119, 0.22), transparent 35%),
+                linear-gradient(180deg, rgba(191, 232, 247, 0.94), rgba(255, 255, 255, 0.92));
             box-shadow: inset 0 -18px 40px rgba(226, 1, 119, 0.18);
         }
 
@@ -150,14 +166,6 @@ HTML_TEMPLATE = """
             height: 160px;
             border-radius: 50%;
             background: rgba(226, 1, 119, 0.16);
-        }
-
-        .mascot-image {
-            width: 178px;
-            position: absolute;
-            left: 12px;
-            bottom: -10px;
-            z-index: 2;
         }
 
         .speech {
@@ -179,6 +187,17 @@ HTML_TEMPLATE = """
             color: var(--yellow);
         }
 
+        .katibu-gif {
+            width: 190px;
+            height: auto;
+            object-fit: contain;
+            position: absolute;
+            left: 22px;
+            bottom: -6px;
+            z-index: 2;
+            filter: drop-shadow(0 18px 24px rgba(169, 33, 142, 0.25));
+        }
+
         .section-label {
             font-size: 11px;
             font-weight: 700;
@@ -192,6 +211,7 @@ HTML_TEMPLATE = """
             padding: 0 14px;
             flex: 1;
             overflow-y: auto;
+            min-height: 0;
         }
 
         .policy-item {
@@ -203,6 +223,7 @@ HTML_TEMPLATE = """
             border-radius: 16px;
             background: rgba(255, 255, 255, 0.055);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            min-width: 0;
         }
 
         .policy-item.active {
@@ -221,6 +242,10 @@ HTML_TEMPLATE = """
             font-size: 13px;
             color: #F7DCEC;
             flex: 1;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .policy-count {
@@ -230,6 +255,7 @@ HTML_TEMPLATE = """
             background: var(--yellow);
             padding: 3px 8px;
             border-radius: 999px;
+            flex-shrink: 0;
         }
 
         .sidebar-footer {
@@ -262,6 +288,7 @@ HTML_TEMPLATE = """
             display: flex;
             flex-direction: column;
             min-width: 0;
+            min-height: 0;
             background:
                 radial-gradient(circle at top right, rgba(255, 221, 0, 0.08), transparent 28%),
                 var(--dark);
@@ -274,6 +301,8 @@ HTML_TEMPLATE = """
             display: flex;
             align-items: center;
             gap: 14px;
+            flex-shrink: 0;
+            min-width: 0;
         }
 
         .katibu-avatar {
@@ -286,15 +315,19 @@ HTML_TEMPLATE = """
             align-items: center;
             justify-content: center;
             border: 2px solid rgba(255, 221, 0, 0.75);
+            flex-shrink: 0;
         }
 
         .katibu-avatar img {
-            width: 72px;
-            transform: translateY(7px);
+            width: 66px;
+            height: 66px;
+            object-fit: contain;
+            transform: translateY(8px);
         }
 
         .header-title {
             flex: 1;
+            min-width: 0;
         }
 
         .header-title h1 {
@@ -303,11 +336,15 @@ HTML_TEMPLATE = """
             letter-spacing: -0.6px;
             color: var(--white);
             margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .header-title p {
             color: var(--muted);
             font-size: 13px;
+            line-height: 1.35;
         }
 
         .header-chip {
@@ -318,10 +355,13 @@ HTML_TEMPLATE = """
             border-radius: 999px;
             font-size: 12px;
             font-weight: 700;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .messages {
             flex: 1;
+            min-height: 0;
             overflow-y: auto;
             padding: 24px;
             display: flex;
@@ -330,12 +370,15 @@ HTML_TEMPLATE = """
         }
 
         .messages::-webkit-scrollbar,
-        .policy-list::-webkit-scrollbar {
+        .policy-list::-webkit-scrollbar,
+        .suggestions::-webkit-scrollbar {
             width: 5px;
+            height: 4px;
         }
 
         .messages::-webkit-scrollbar-thumb,
-        .policy-list::-webkit-scrollbar-thumb {
+        .policy-list::-webkit-scrollbar-thumb,
+        .suggestions::-webkit-scrollbar-thumb {
             background: rgba(255, 221, 0, 0.25);
             border-radius: 999px;
         }
@@ -348,7 +391,7 @@ HTML_TEMPLATE = """
             border-radius: 24px;
             padding: 20px;
             display: grid;
-            grid-template-columns: 1fr 160px;
+            grid-template-columns: minmax(0, 1fr) 150px;
             gap: 16px;
             align-items: center;
         }
@@ -366,8 +409,10 @@ HTML_TEMPLATE = """
             line-height: 1.55;
         }
 
-        .welcome-panel img {
-            width: 150px;
+        .welcome-katibu-gif {
+            width: 140px;
+            height: auto;
+            object-fit: contain;
             justify-self: center;
             filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.25));
         }
@@ -402,6 +447,8 @@ HTML_TEMPLATE = """
 
         .msg-avatar.ai img {
             width: 48px;
+            height: 48px;
+            object-fit: contain;
             transform: translateY(6px);
         }
 
@@ -411,10 +458,11 @@ HTML_TEMPLATE = """
         }
 
         .msg-body {
-            max-width: 78%;
+            max-width: min(78%, 720px);
             display: flex;
             flex-direction: column;
             gap: 6px;
+            min-width: 0;
         }
 
         .msg-row.user .msg-body {
@@ -427,6 +475,7 @@ HTML_TEMPLATE = """
             font-size: 14px;
             line-height: 1.58;
             white-space: pre-wrap;
+            overflow-wrap: anywhere;
         }
 
         .msg-bubble.ai {
@@ -455,6 +504,7 @@ HTML_TEMPLATE = """
             border: 1px solid rgba(0, 174, 239, 0.22);
             border-radius: 16px;
             padding: 12px 14px;
+            overflow-wrap: anywhere;
         }
 
         .source-title {
@@ -484,6 +534,8 @@ HTML_TEMPLATE = """
             display: flex;
             gap: 10px;
             overflow-x: auto;
+            flex-shrink: 0;
+            -webkit-overflow-scrolling: touch;
         }
 
         .suggest-btn {
@@ -498,6 +550,7 @@ HTML_TEMPLATE = """
             font-size: 12px;
             font-weight: 700;
             transition: 0.18s ease;
+            flex-shrink: 0;
         }
 
         .suggest-btn:hover {
@@ -510,6 +563,7 @@ HTML_TEMPLATE = """
             padding: 16px 22px 22px;
             background: rgba(38, 13, 32, 0.98);
             border-top: 1px solid rgba(255, 255, 255, 0.11);
+            flex-shrink: 0;
         }
 
         .input-wrap {
@@ -539,6 +593,7 @@ HTML_TEMPLATE = """
             font-size: 14px;
             line-height: 1.5;
             font-family: 'DM Sans', sans-serif;
+            min-width: 0;
         }
 
         textarea::placeholder {
@@ -575,51 +630,6 @@ HTML_TEMPLATE = """
             border-bottom-left-radius: 5px;
         }
 
-        .gif-card {
-    min-height: 240px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background:
-        radial-gradient(circle at top right, rgba(255, 221, 0, 0.22), transparent 28%),
-        radial-gradient(circle at bottom left, rgba(226, 1, 119, 0.22), transparent 35%),
-        linear-gradient(180deg, rgba(191, 232, 247, 0.94), rgba(255, 255, 255, 0.92));
-}
-
-.katibu-gif {
-    width: 190px;
-    height: auto;
-    object-fit: contain;
-    position: absolute;
-    left: 22px;
-    bottom: -6px;
-    z-index: 2;
-    filter: drop-shadow(0 18px 24px rgba(169, 33, 142, 0.25));
-}
-
-.welcome-katibu-gif {
-    width: 150px;
-    height: auto;
-    object-fit: contain;
-    justify-self: center;
-    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.25));
-}
-
-.katibu-avatar img {
-    width: 66px;
-    height: 66px;
-    object-fit: contain;
-    transform: translateY(8px);
-}
-
-.msg-avatar.ai img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    transform: translateY(6px);
-}
-
-
         .typing span {
             width: 7px;
             height: 7px;
@@ -649,35 +659,264 @@ HTML_TEMPLATE = """
             }
         }
 
-        @media (max-width: 850px) {
+        /* Tablet */
+        @media (max-width: 1024px) {
             body {
-                padding: 0;
+                padding: 14px;
             }
 
             .app-shell {
-                height: 100vh;
+                height: calc(100vh - 28px);
+                grid-template-columns: 260px minmax(0, 1fr);
+            }
+
+            .brand {
+                padding: 20px 18px 14px;
+            }
+
+            .brand-name {
+                font-size: 18px;
+            }
+
+            .brand-tagline {
+                font-size: 10.5px;
+                padding-left: 52px;
+            }
+
+            .mascot-card {
+                min-height: 205px;
+                margin-left: 14px;
+                margin-right: 14px;
+            }
+
+            .katibu-gif {
+                width: 160px;
+                left: 14px;
+            }
+
+            .speech {
+                width: 120px;
+                font-size: 11px;
+            }
+
+            .policy-item {
+                padding: 10px;
+            }
+
+            .msg-body {
+                max-width: 84%;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 760px) {
+            body {
+                padding: 0;
+                align-items: stretch;
+                overflow: hidden;
+            }
+
+            .app-shell {
+                width: 100%;
+                height: 100dvh;
+                min-height: 0;
                 border-radius: 0;
                 grid-template-columns: 1fr;
+                border: none;
             }
 
             .sidebar {
                 display: none;
             }
 
-            .welcome-panel {
-                grid-template-columns: 1fr;
+            .chat-main {
+                height: 100dvh;
             }
 
-            .welcome-panel img {
-                display: none;
+            .chat-header {
+                padding: 14px 16px;
+                gap: 10px;
+            }
+
+            .katibu-avatar {
+                width: 44px;
+                height: 44px;
+                border-radius: 14px;
+            }
+
+            .katibu-avatar img {
+                width: 56px;
+                height: 56px;
+                transform: translateY(7px);
+            }
+
+            .header-title h1 {
+                font-size: 18px;
+            }
+
+            .header-title p {
+                font-size: 11.5px;
+                line-height: 1.25;
             }
 
             .header-chip {
                 display: none;
             }
 
+            .messages {
+                padding: 16px 14px;
+                gap: 14px;
+            }
+
+            .welcome-panel {
+                grid-template-columns: 1fr;
+                padding: 16px;
+                border-radius: 20px;
+            }
+
+            .welcome-panel h2 {
+                font-size: 18px;
+            }
+
+            .welcome-panel p {
+                font-size: 13px;
+            }
+
+            .welcome-katibu-gif {
+                display: none;
+            }
+
+            .msg-avatar {
+                width: 30px;
+                height: 30px;
+            }
+
+            .msg-avatar.ai img {
+                width: 42px;
+                height: 42px;
+                transform: translateY(6px);
+            }
+
             .msg-body {
                 max-width: 88%;
+            }
+
+            .msg-bubble {
+                font-size: 13px;
+                padding: 11px 13px;
+                border-radius: 16px;
+            }
+
+            .source-card {
+                padding: 10px 12px;
+                border-radius: 14px;
+            }
+
+            .source-title {
+                font-size: 12px;
+            }
+
+            .source-item {
+                font-size: 11.5px;
+            }
+
+            .suggestions {
+                padding: 8px 14px 4px;
+                gap: 8px;
+            }
+
+            .suggest-btn {
+                font-size: 11.5px;
+                padding: 8px 12px;
+            }
+
+            .input-bar {
+                padding: 12px 12px 14px;
+            }
+
+            .input-wrap {
+                border-radius: 18px;
+                padding: 10px;
+            }
+
+            textarea {
+                font-size: 13px;
+            }
+
+            .send-btn {
+                width: 38px;
+                height: 38px;
+                border-radius: 13px;
+                font-size: 16px;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 420px) {
+            .chat-header {
+                padding: 12px;
+            }
+
+            .katibu-avatar {
+                width: 40px;
+                height: 40px;
+            }
+
+            .katibu-avatar img {
+                width: 52px;
+                height: 52px;
+            }
+
+            .header-title h1 {
+                font-size: 16px;
+            }
+
+            .header-title p {
+                font-size: 10.5px;
+            }
+
+            .messages {
+                padding: 12px 10px;
+            }
+
+            .welcome-panel {
+                padding: 14px;
+            }
+
+            .welcome-panel h2 {
+                font-size: 16px;
+            }
+
+            .welcome-panel p {
+                font-size: 12px;
+            }
+
+            .msg-body {
+                max-width: 92%;
+            }
+
+            .msg-bubble {
+                font-size: 12.5px;
+                padding: 10px 12px;
+            }
+
+            .suggestions {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .suggest-btn {
+                font-size: 11px;
+                padding: 7px 10px;
+            }
+
+            .input-bar {
+                padding: 10px;
+            }
+
+            .send-btn {
+                width: 36px;
+                height: 36px;
             }
         }
     </style>
@@ -695,17 +934,17 @@ HTML_TEMPLATE = """
                 <div class="brand-tagline">Aviation Policy Assistant</div>
             </div>
 
-            <div class="mascot-card gif-card">
-    <div class="speech">
-        Hi, I’m <strong>Katibu</strong>. Ask me about your policies.
-    </div>
+            <div class="mascot-card">
+                <div class="speech">
+                    Hi, I’m <strong>Katibu</strong>. Ask me about your policies.
+                </div>
 
-    <img 
-        src="{{ katibu_gif_url }}" 
-        alt="Katibu waving hello" 
-        class="katibu-gif"
-    >
-</div>
+                <img
+                    src="{{ katibu_gif_url }}"
+                    alt="Katibu waving hello"
+                    class="katibu-gif"
+                >
+            </div>
 
             <div class="section-label">Policy Corpus</div>
 
@@ -764,8 +1003,8 @@ HTML_TEMPLATE = """
         <main class="chat-main">
             <header class="chat-header">
                 <div class="katibu-avatar">
-    <img src="{{ katibu_gif_url }}" alt="Katibu waving hello">
-</div>
+                    <img src="{{ katibu_gif_url }}" alt="Katibu waving hello">
+                </div>
 
                 <div class="header-title">
                     <h1>PolicyPilot AI</h1>
@@ -784,12 +1023,13 @@ HTML_TEMPLATE = """
                             privacy, cookies, data retention, data subject rights, and breach response.
                         </p>
                     </div>
-                                </div>
+                    <img src="{{ katibu_gif_url }}" alt="Katibu waving hello" class="welcome-katibu-gif">
+                </div>
 
                 <div class="msg-row">
                     <div class="msg-avatar ai">
-    <img src="{{ katibu_gif_url }}" alt="Katibu">
-</div>
+                        <img src="{{ katibu_gif_url }}" alt="Katibu">
+                    </div>
                     <div class="msg-body">
                         <div class="msg-bubble ai">
 Hello! Ask me a policy question and I’ll respond using the policy corpus, including citations and supporting snippets where available.
@@ -864,7 +1104,6 @@ Hello! Ask me a policy question and I’ll respond using the policy corpus, incl
 
         function addAIMessage(data) {
             const answer = data.answer || "I could not generate an answer.";
-
             let sourcesHtml = "";
 
             if (data.citations && data.citations.length > 0) {
@@ -898,7 +1137,7 @@ Hello! Ask me a policy question and I’ll respond using the policy corpus, incl
             row.className = "msg-row";
             row.innerHTML = `
                 <div class="msg-avatar ai">
-                    <img src="{{ katibu_url }}" alt="Katibu">
+                    <img src="{{ katibu_gif_url }}" alt="Katibu">
                 </div>
                 <div class="msg-body">
                     <div class="msg-bubble ai">${escapeHtml(answer)}</div>
@@ -927,7 +1166,6 @@ Hello! Ask me a policy question and I’ll respond using the policy corpus, incl
             addUserMessage(question);
             input.value = "";
             input.style.height = "auto";
-
             showTyping(true);
 
             try {
@@ -940,7 +1178,6 @@ Hello! Ask me a policy question and I’ll respond using the policy corpus, incl
                 });
 
                 const data = await response.json();
-
                 showTyping(false);
 
                 if (!response.ok) {
