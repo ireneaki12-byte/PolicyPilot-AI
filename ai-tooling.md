@@ -18,7 +18,3 @@ AI assistance was helpful for quickly generating boilerplate code, explaining un
 ## What Did Not Work Well
 
 Some generated code required manual correction, especially around imports, environment variables, and deployment configuration.
-
-## Human Contribution
-
-I reviewed, tested, edited, and integrated the code. I also created the policy corpus, ran the application, reviewed evaluation results, and prepared the final demo.

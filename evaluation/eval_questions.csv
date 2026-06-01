@@ -19,3 +19,6 @@ id,question,gold_answer,expected_source
 18,"What should a privacy notice include?","It should include the controller and DPO details, processing purposes, lawful basis, data categories, recipients, transfers, retention periods, data subject rights, and complaint rights.","data_protection_policy.md"
 19,"What should happen when a data subject withdraws consent?","Processing activities based on that consent should stop, relevant departments and third parties should be notified, and records updated.","data_subject_request_procedures.md"
 20,"What happens if a question is outside the policy corpus?","The assistant should state that it can only answer based on the Kenya Aviation Limited data protection policy corpus.","N/A"
+
+groundedness_manual_score: 75%
+citation_accuracy_manual_score: 95%

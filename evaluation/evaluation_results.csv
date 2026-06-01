@@ -1,186 +1,199 @@
-id,question,gold_answer,generated_answer,expected_source,retrieved_sources,citation_match_auto,latency_seconds,groundedness_manual_score,citation_accuracy_manual_score
+id,question,gold_answer,generated_answer,expected_source,retrieved_sources,retrieved_snippets,citation_match_auto,exact_match_score,partial_match_score,latency_seconds,groundedness_manual_score,citation_accuracy_manual_score
 1,Who is responsible for overseeing data protection matters?,The Data Protection Officer is responsible for overseeing data protection matters and monitoring compliance.,"Answer:
-The Data Protection Officer (DPO) is responsible for overseeing data protection matters.
+Department heads and managers are responsible for overseeing data protection matters within their departments.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""The Data Protection Officer (DPO) shall be responsible for ensuring compliance with the Data Protection Act and this policy. The DPO shall be the primary point of contact for data protection matters within the organization."" 
-  (Source: Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020))",data_protection_policy.md,[],False,22.663317918777466,,
+- Department heads and managers are responsible for ensuring that their teams comply with the data protection policy. Their specific responsibilities include:
+  • Compliance Monitoring: Monitoring data protection practices within their departments to ensure that personal data is handled in compliance with company policy and legal requirements.
+  • Employee Awareness: Ensuring that team members are trained on and aware of their data protection responsibilities.
+  • Incident Reporting: Reporting any suspected or actual data breaches to the DPO in a timely manner.
+  • Data Minimization: Ensuring that only the necessary personal data is collected and processed within their departments, and that data is securely stored and disposed of when no longer needed.",data_protection_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['1.5.6\tDepartment Heads and Managers\nDepartment heads and managers are responsible for ensuring that their teams comply with the data protection policy. Their specific responsibilities include:\n•\tCompliance Monitoring: Monitoring data protection practices within their departments to ensure that perso', '1.5.6\tDepartment Heads and Managers\nDepartment heads and managers are responsible for ensuring that their teams comply with the data protection policy. Their specific responsibilities include:\n•\tCompliance Monitoring: Monitoring data protection practices within their departments to ensure that perso', '1.5.6\tDepartment Heads and Managers\nDepartment heads and managers are responsible for ensuring that their teams comply with the data protection policy. Their specific responsibilities include:\n•\tCompliance Monitoring: Monitoring data protection practices within their departments to ensure that perso', '•\tAccess Controls: Ensuring that only authorized personnel have access to personal data, and that access rights are regularly reviewed and updated.\n•\tIncident Response: Supporting the DPO in responding to data breaches and security incidents by providing technical expertise.\n•\tSystem Monitoring: Mon']",True,0,1.0,15.453,,
 2,What should an employee do if they suspect a personal data breach?,They should immediately report it to the DPO and preserve evidence relating to the possible breach.,"Answer:
-If an employee suspects a personal data breach, they should immediately report it to the Data Protection Officer (DPO) or the IT department.
+If an employee suspects a personal data breach, they should not attempt to investigate the matter themselves. They should immediately contact the person or team designated as the key point of contact for Personal Data Breaches (the DPO) and follow the INFORMATION SECURITY INCIDENT RESPONSE PLAN. They should also preserve all evidence relating to the potential Personal Data Breach.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Policy Corpus (KALPC-001)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""In the event of a suspected data breach, the employee shall notify the DPO or the IT department immediately."" 
-- ""The DPO or the IT department shall investigate the breach and take necessary actions to mitigate its effects."" 
-(KALPC-001, Section 5.3)",data_breach_policy_and_procedures.md,[],False,10.06867527961731,,
+- ""If you know or suspect that a Personal Data Breach has occurred, do not attempt to investigate the matter yourself. Immediately contact the person or team designated as the key point of contact for Personal Data Breaches (the DPO) and follow the INFORMATION SECURITY INCIDENT RESPONSE PLAN. You should preserve all evidence relating to the potential Personal Data Breach.""",data_breach_policy_and_procedures.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['We have put in place procedures to deal with any suspected Personal Data Breach and will notify Data Subjects or any applicable regulator where we are legally required to do so.\nIf you know or suspect that a Personal Data Breach has occurred, do not attempt to investigate the matter yourself. Immedi', 'We have put in place procedures to deal with any suspected Personal Data Breach and will notify Data Subjects or any applicable regulator where we are legally required to do so.\nIf you know or suspect that a Personal Data Breach has occurred, do not attempt to investigate the matter yourself. Immedi', 'We have put in place procedures to deal with any suspected Personal Data Breach and will notify Data Subjects or any applicable regulator where we are legally required to do so.\nIf you know or suspect that a Personal Data Breach has occurred, do not attempt to investigate the matter yourself. Immedi', '1.8.5\tReporting a Personal Data Breach\nAny actual or suspected breach involving personal data must be reported immediately. All employees have the responsibility to report data breaches, regardless of their role or the severity of the incident. Breaches include, but are not limited to, unauthorized ']",False,0,1.0,8.721,,
 3,Within how long should a reportable breach be notified to the Data Commissioner?,A reportable personal data breach should be notified to the Data Commissioner within 72 hours of becoming aware of the breach.,"Answer:
-Within 72 hours of becoming aware of a reportable breach, a notification should be made to the Data Commissioner.
+Within seventy-two hours (72) of becoming aware of the breach.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Policy Corpus (Data Protection Policy Document)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""In the event of a reportable breach, the Data Protection Officer shall notify the Data Commissioner within 72 hours of becoming aware of the breach. This notification shall include the nature of the breach, the number of individuals affected, and any measures taken to mitigate the breach."" (Data Protection Policy Document, Section 5.3)",data_breach_policy_and_procedures.md,[],False,10.962176084518433,,
+- The DPA requires Controllers to notify in writing, any Personal Data Breach (where there is real risk to the data subject) to the Data Commissioner within seventy-two hours (72) and, in certain instances, the Data Subject within a reasonable practical period.",data_breach_policy_and_procedures.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['1.8.5\tReporting a Personal Data Breach\nAny actual or suspected breach involving personal data must be reported immediately. All employees have the responsibility to report data breaches, regardless of their role or the severity of the incident. Breaches include, but are not limited to, unauthorized ', '1.8.5\tReporting a Personal Data Breach\nAny actual or suspected breach involving personal data must be reported immediately. All employees have the responsibility to report data breaches, regardless of their role or the severity of the incident. Breaches include, but are not limited to, unauthorized ', '1.8.5\tReporting a Personal Data Breach\nAny actual or suspected breach involving personal data must be reported immediately. All employees have the responsibility to report data breaches, regardless of their role or the severity of the incident. Breaches include, but are not limited to, unauthorized ', 'The right to object\tNot specified.  Where the request is declined, within fourteen days of the decision to decline.\nRights in relation to automated decision making and profiling.\tWithin reasonable time\nBreach notification \tWithin 72 hours of becoming aware of breach(notification to the Data Commissi']",False,0,1.0,9.34,,
 4,What are examples of personal data collected by the airline?,"Examples include name, ID number, date of birth, phone number, postal address, location data, IP address, account details, photos, and biometrics.","Answer:
-Examples of personal data collected by the airline include passenger names, contact information, travel documents, and health information.
+The airline collects personal data through various methods, including when you book a flight, sign up for the loyalty program, create an account on the website, subscribe to email newsletters, enter a competition, promotion, or survey, or give feedback or contact the airline.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+- Website Privacy Policy - website_privacy_policy.md
 
 Relevant Snippets:
-- ""Personal data collected by the airline includes, but is not limited to, passenger names, contact information, travel documents, and health information."" 
-  (Source: Data Protection Policy Document, Section 3.1)",data_protection_policy.md,[],False,10.858627557754517,,
+- We collect your personal data through various methods, including:
+  a. Your interactions with us. You may give us your personal data by filling in online forms or by corresponding with us by post, phone, email or otherwise. This includes personal data you provide when you:
+    i. book a flight;
+    ii. sign up for our loyalty program; 
+    iii. create an account on our website
+    iv. subscribe to our email newsletters; 
+    v. enter a competition, promotion or survey; or
+    vi. give us feedback or contact us.",data_protection_policy.md,"['website_privacy_policy.md', 'website_privacy_policy.md', 'website_privacy_policy.md', 'data_protection_policy.md']","['How is your personal data collected?\nWe collect your personal data through various methods, including:\na.\tYour interactions with us. You may give us your personal data by filling in online forms or by corresponding with us by post, phone, email or otherwise. This includes personal data you provide w', 'How is your personal data collected?\nWe collect your personal data through various methods, including:\na.\tYour interactions with us. You may give us your personal data by filling in online forms or by corresponding with us by post, phone, email or otherwise. This includes personal data you provide w', 'How is your personal data collected?\nWe collect your personal data through various methods, including:\na.\tYour interactions with us. You may give us your personal data by filling in online forms or by corresponding with us by post, phone, email or otherwise. This includes personal data you provide w', 'Kenya Aviation Limited uses Privacy Notices, which are separate documents from our internal Data Protection Policy and are provided to all data subjects including job candidates, employees, contractors, sub-contractors, Kenya Aviation Limited’s website visitors, physical site visitors, customers, su']",True,0,0.0,8.94,,
 5,What are the data protection principles?,"The principles include lawfulness, fairness, transparency, purpose limitation, data minimization, accuracy, storage limitation, security, transfer limitation, data subject rights, and accountability.","Answer:
-The data protection principles are based on the General Data Protection Regulation (GDPR) and are applicable to Kenya Aviation Limited.
+The data protection principles are:
+- Processed in a manner that ensures its security using appropriate technical and organisational measures to protect against unauthorised or unlawful Processing and against accidental loss, destruction or damage (Security, Integrity and Confidentiality);
+- Not transferred to another country without appropriate safeguards being in place (Transfer Limitation);
+- Made available to Data Subjects and allow Data Subjects to exercise certain rights in relation to their Personal Data (Data Subject's Rights and Requests).
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Policy Corpus (KALPC-001)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""Kenya Aviation Limited is committed to protecting the personal data of its customers, employees, and other stakeholders. The company adheres to the following data protection principles: 
-  1. Lawfulness, fairness, and transparency
-  2. Purpose limitation
-  3. Data minimization
-  4. Accuracy
-  5. Storage limitation
-  6. Integrity and confidentiality
-  7. Accountability"" 
-  (Source: KALPC-001, Section 3.1)",data_protection_policy.md,[],False,11.114314794540405,,
+- (g) Processed in a manner that ensures its security using appropriate technical and organisational measures to protect against unauthorised or unlawful Processing and against accidental loss, destruction or damage (Security, Integrity and Confidentiality);
+- (h) Not transferred to another country without appropriate safeguards being in place (Transfer Limitation); and
+- (i) Made available to Data Subjects and allow Data Subjects to exercise certain rights in relation to their Personal Data (Data Subject's Rights and Requests).",data_protection_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['(g)\tProcessed in a manner that ensures its security using appropriate technical and organisational measures to protect against unauthorised or unlawful Processing and against accidental loss, destruction or damage (Security, Integrity and Confidentiality);\n(h)\tnot transferred to another country with', '(g)\tProcessed in a manner that ensures its security using appropriate technical and organisational measures to protect against unauthorised or unlawful Processing and against accidental loss, destruction or damage (Security, Integrity and Confidentiality);\n(h)\tnot transferred to another country with', '(g)\tProcessed in a manner that ensures its security using appropriate technical and organisational measures to protect against unauthorised or unlawful Processing and against accidental loss, destruction or damage (Security, Integrity and Confidentiality);\n(h)\tnot transferred to another country with', '1.8.1\tProactive and Preventive Approach to Data Protection and Privacy \nOur employees shall proactively establish methods to recognise poor data protection designs, to anticipate poor data protection practices and outcomes, and to correct their negative impacts. We also undertake to only use data pr']",True,0,0.5,9.84,,
 6,What is the timeline for responding to a data subject access request?,A right of access request should be answered within 7 days of receiving a verifiable request.,"Answer:
-The timeline for responding to a data subject access request is 30 days from the date of receipt of the request.
+The timeline for responding to a data subject access request is not more than seven days. If it's not possible to respond within this timeframe, a suitable explanation with an estimate of the timelines should be issued.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""All requests for access to personal data must be responded to within 30 days of receipt of the request. This timeframe may be extended by a further 60 days in exceptional circumstances."" 
-  (Source: Data Protection Policy, Section 5.3, Kenya Aviation Limited Data Protection Policy Document (2020))",data_subject_rights_policy.md,[],False,11.389793157577515,,
+- ""The right of access	On request but not more than seven days; if not possible a suitable explanation with estimate timelines to be issued""",data_subject_rights_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'customer_privacy_policy.md']","['DATA SUBJECT REQUEST\tTimelines \nThe right to be informed\tWhen data is collected (if supplied by data subject) not specified (if not supplied by data subject)\nThe right of access\tOn request but not more than seven days; if not possible a suitable explanation with estimate timelines to be issued  \nThe', 'DATA SUBJECT REQUEST\tTimelines \nThe right to be informed\tWhen data is collected (if supplied by data subject) not specified (if not supplied by data subject)\nThe right of access\tOn request but not more than seven days; if not possible a suitable explanation with estimate timelines to be issued  \nThe', 'DATA SUBJECT REQUEST\tTimelines \nThe right to be informed\tWhen data is collected (if supplied by data subject) not specified (if not supplied by data subject)\nThe right of access\tOn request but not more than seven days; if not possible a suitable explanation with estimate timelines to be issued  \nThe', 'Time limit to respond\nWe try to respond to all legitimate requests within the statutory timelines outlined in the data protection laws. Occasionally it could take us longer if your request is particularly complex or you have made several requests. In this case, we will notify you and keep you update']",False,0,0.5,9.298,,
 7,What is the timeline for responding to a request for erasure?,A request for erasure should be answered within 14 days of receiving a verifiable request.,"Answer:
-The timeline for responding to a request for erasure is not explicitly stated in the provided policy context.
+The timeline for responding to a request for erasure is within 14 days of receiving a verifiable request.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+- Data Subject Rights Policy - data_subject_rights_policy.md
 
 Relevant Snippets:
-- None",data_subject_rights_policy.md,[],False,9.83431100845337,,
+- Right to Erasure (Right to be Forgotten) Data subjects can request the deletion of personal data under certain conditions. Within 14 days of receiving a verifiable request. - [Source 1]
+- Right to Erasure (Right to be Forgotten) Data subjects can request the deletion of personal data under certain conditions. Within 14 days of receiving a verifiable request. - [Source 2]
+- Right to Erasure (Right to be Forgotten) Data subjects can request the deletion of personal data under certain conditions. Within 14 days of receiving a verifiable request. - [Source 3]",data_subject_rights_policy.md,"['data_subject_rights_policy.md', 'data_subject_rights_policy.md', 'data_subject_rights_policy.md', 'data_protection_policy.md']","['Data Subject Right\tDescription\tTimeframe for Response\tTimeframe for Notification of Decline of Request\nRight of Access\tData subjects have the right to request and receive confirmation of data being processed about them.\tWithin 7 days of receiving a verifiable request.\t-\nRight to Correction\tData subj', 'Data Subject Right\tDescription\tTimeframe for Response\tTimeframe for Notification of Decline of Request\nRight of Access\tData subjects have the right to request and receive confirmation of data being processed about them.\tWithin 7 days of receiving a verifiable request.\t-\nRight to Correction\tData subj', 'Data Subject Right\tDescription\tTimeframe for Response\tTimeframe for Notification of Decline of Request\nRight of Access\tData subjects have the right to request and receive confirmation of data being processed about them.\tWithin 7 days of receiving a verifiable request.\t-\nRight to Correction\tData subj', 'DATA SUBJECT REQUEST\tTimelines \nThe right to be informed\tWhen data is collected (if supplied by data subject) not specified (if not supplied by data subject)\nThe right of access\tOn request but not more than seven days; if not possible a suitable explanation with estimate timelines to be issued  \nThe']",True,0,1.0,11.115,,
 8,What is the timeline for data portability requests?,A data portability request should be answered within 30 days of receiving a verifiable request.,"Answer:
-Data portability requests are typically processed within 30 days from the date of receipt.
+The timeline for data portability requests is thirty days from the date of receipt of the request. If the request is declined, a suitable explanation with an estimate of the timelines should be issued within seven days of the decision to decline.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Policy Corpus (Data Protection Policy.docx)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""All data portability requests shall be processed within 30 days from the date of receipt. The requestor shall be notified of the outcome in writing."" 
-  (Data Protection Policy.docx, Section 5.3)",data_subject_rights_policy.md,[],False,10.012309551239014,,
-9,What categories of cookies does the website use?,"The website uses strictly necessary cookies, analytical or performance cookies, functionality cookies, targeting cookies, and third-party/social media cookies.","I can only answer based on the Kenya Aviation Limited policy corpus available to me. I could not find this information in the provided policy documents.
+- The right to data portability	Thirty days from date of receipt of request.  Where the request is declined, within seven days of the decision to decline (Data Protection Policy - data_protection_policy.md)",data_subject_rights_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_subject_request_procedures.md']","['DATA SUBJECT REQUEST\tTimelines \nThe right to be informed\tWhen data is collected (if supplied by data subject) not specified (if not supplied by data subject)\nThe right of access\tOn request but not more than seven days; if not possible a suitable explanation with estimate timelines to be issued  \nThe', 'DATA SUBJECT REQUEST\tTimelines \nThe right to be informed\tWhen data is collected (if supplied by data subject) not specified (if not supplied by data subject)\nThe right of access\tOn request but not more than seven days; if not possible a suitable explanation with estimate timelines to be issued  \nThe', 'DATA SUBJECT REQUEST\tTimelines \nThe right to be informed\tWhen data is collected (if supplied by data subject) not specified (if not supplied by data subject)\nThe right of access\tOn request but not more than seven days; if not possible a suitable explanation with estimate timelines to be issued  \nThe', '5.5.7\tRequest for Data Portability\nDefinition:\nA data subject requests the transfer of their personal data to another data controller in a structured, machine-readable format.\nRequired Actions:\n1)\tRequest Record: Log the request in the ""Kenya Aviation Limited Data Subject Rights Request Form"" (acces']",False,0,0.5,8.618,,
+9,What categories of cookies does the website use?,"The website uses strictly necessary cookies, analytical or performance cookies, functionality cookies, targeting cookies, and third-party/social media cookies.","Answer:
+The website uses strictly necessary cookies and Google Analytics cookies.
 
-However, I can suggest that you may be looking for information related to the Kenya Aviation Limited Cookie Policy. If you have access to the Cookie Policy document, please provide it, and I'll be happy to assist you.
+Citations:
+- Cookie Policy - cookie_policy.md
 
-If not, please provide more context or details about the policy you are referring to, and I'll do my best to help.",cookie_policy.md,[],False,11.036606788635254,,
+Relevant Snippets:
+- We use the following cookies:
+  ● Strictly necessary cookies. These are cookies that are required for the operation of our website. These essential cookies are always enabled because our website will not work properly without them. These include cookies that enable you to log into secure areas of our website, use a shopping cart or make use of e-billing services among other examples. 
+  - You can find more information about the individual cookies we use and the purposes for which we use them in the table below:
+    Cookie Name
+    Purpose 
+    Google Analytics	It uses cookies to help analyse how the website is being used. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google;",cookie_policy.md,"['cookie_policy.md', 'cookie_policy.md', 'cookie_policy.md', 'cookie_policy.md']","['We use the following cookies:\n●\tStrictly necessary cookies. These are cookies that are required for the operation of our website. These essential cookies are always enabled because our website will not work properly without them. These include cookies that enable you to log into secure areas of our ', 'We use the following cookies:\n●\tStrictly necessary cookies. These are cookies that are required for the operation of our website. These essential cookies are always enabled because our website will not work properly without them. These include cookies that enable you to log into secure areas of our ', 'We use the following cookies:\n●\tStrictly necessary cookies. These are cookies that are required for the operation of our website. These essential cookies are always enabled because our website will not work properly without them. These include cookies that enable you to log into secure areas of our ', 'You can find more information about the individual cookies we use and the purposes for which we use them in the table below:\nCookie Name\nPurpose \nGoogle Analytics\tIt uses cookies to help analyse how the website is being used. The information generated by the cookie about your use of the website (inc']",True,0,0.5,9.877,,
 10,Can personal data be shared informally?,No. Personal data may not be shared informally and access should be formally requested where required.,"Answer:
 No, personal data cannot be shared informally.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""Personal data shall only be shared formally, in accordance with the procedures outlined in this policy. Informal sharing of personal data is strictly prohibited."" 
-- ""All employees are expected to adhere to this policy and report any instances of informal data sharing to the Data Protection Officer.""",data_protection_policy.md,[],False,10.858955383300781,,
+- ""All sharing of personal data shall comply with the information provided to the relevant data subjects and, if required, the consent of such data subjects shall be obtained prior to the sharing of their personal data;"" 
+- ""You may only share the Personal Data we hold with another employee, agent or representative of our group (which includes our subsidiaries and our ultimate holding company along with its subsidiaries) if the recipient has a job-related need to know the information and the transfer complies with any applicable cross-border transfer restrictions.""",data_protection_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['3.\tAll sharing of personal data shall comply with the information provided to the relevant data subjects and, if required, the consent of such data subjects shall be obtained prior to the sharing of their personal data; \n4.\tAll employees, agents, contractors, or other parties working on behalf of th', '3.\tAll sharing of personal data shall comply with the information provided to the relevant data subjects and, if required, the consent of such data subjects shall be obtained prior to the sharing of their personal data; \n4.\tAll employees, agents, contractors, or other parties working on behalf of th', '3.\tAll sharing of personal data shall comply with the information provided to the relevant data subjects and, if required, the consent of such data subjects shall be obtained prior to the sharing of their personal data; \n4.\tAll employees, agents, contractors, or other parties working on behalf of th', '1.8.2\tSharing Personal Data \nGenerally we are not allowed to share Personal Data with third parties unless certain safeguards and contractual arrangements have been put in place. \nYou may only share the Personal Data we hold with another employee, agent or representative of our group (which includes']",True,0,0.5,10.36,,
 11,What security measures are required for storing personal data?,"Electronic personal data should be stored securely using measures such as passwords, two-factor authentication, geo-restricted authentication, SSL encryption, or RSA encryption.","Answer:
-Personal data stored by Kenya Aviation Limited must be secured in accordance with the Data Protection Policy. This includes ensuring that access to personal data is restricted to authorized personnel only.
+We have introduced appropriate administrative, physical and technical measures to secure all storage and transmission of personal data, including up-to-date antivirus protection, encryption, and the use of privacy filters.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Policy Manual (Section 5.2)
+- Website Privacy Policy - website_privacy_policy.md
+- Customer Privacy Policy - customer_privacy_policy.md
 
 Relevant Snippets:
-- ""Access to personal data shall be restricted to personnel who require such access to perform their duties. All personnel with access to personal data shall be required to sign a confidentiality agreement."" 
-- ""Personal data shall be stored in a secure manner, using encryption and other appropriate security measures to prevent unauthorized access, disclosure, or loss.""",data_protection_policy.md,[],False,10.578935623168945,,
+- We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. We have introduced appropriate administrative, physical and technical measures such as up-to-date antivirus protection, encryption and the use of privacy filters to secure all storage and transmission of personal data by us. 
+  (Source 1: Website Privacy Policy - website_privacy_policy.md)
+- We have introduced appropriate administrative, physical and technical measures to secure all storage and transmission of personal data, including up-to-date antivirus protection, encryption, and the use of privacy filters.
+  (Source 4: Customer Privacy Policy - customer_privacy_policy.md)",data_protection_policy.md,"['website_privacy_policy.md', 'website_privacy_policy.md', 'website_privacy_policy.md', 'customer_privacy_policy.md']","['2.7\tData security\nWe have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. We have introduced appropriate administrative, physical and technical measures such as up-to-date antivirus ', '2.7\tData security\nWe have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. We have introduced appropriate administrative, physical and technical measures such as up-to-date antivirus ', '2.7\tData security\nWe have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. We have introduced appropriate administrative, physical and technical measures such as up-to-date antivirus ', '3.7\tData security\nWe have put in place appropriate security measures to prevent your personal data from being accidentally lost, used or accessed in an unauthorized way, altered or disclosed. We have introduced appropriate administrative, physical and technical measures such as up-to-date antivirus ']",False,0,0.0,9.285,,
 12,Can employees share passwords?,"No. Passwords should not be written down or shared between employees, agents, contractors, or other parties.","Answer:
-No, employees are not allowed to share passwords.
+No, employees should not share passwords.
 
 Citations:
-- Password Policy - Kenya Aviation Limited Password Policy Document (KALPPD-001)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""Passwords must be kept confidential and not shared with anyone, including colleagues."" 
-- ""Sharing passwords is strictly prohibited and may result in disciplinary action.""",data_protection_policy.md,[],False,10.235267162322998,,
+- Under no circumstances should any passwords be written down or shared between any employees, agents, contractors, or other parties working on behalf of Kenya Aviation Limited, irrespective of seniority or department.",data_protection_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['All passwords used to protect personal data should be changed regularly and should not use words or phrases that can be easily guessed or otherwise compromised. All passwords must contain a combination of uppercase and lowercase letters, numbers, and symbols; Under no circumstances should any passwo', 'All passwords used to protect personal data should be changed regularly and should not use words or phrases that can be easily guessed or otherwise compromised. All passwords must contain a combination of uppercase and lowercase letters, numbers, and symbols; Under no circumstances should any passwo', 'All passwords used to protect personal data should be changed regularly and should not use words or phrases that can be easily guessed or otherwise compromised. All passwords must contain a combination of uppercase and lowercase letters, numbers, and symbols; Under no circumstances should any passwo', '3.\tAll sharing of personal data shall comply with the information provided to the relevant data subjects and, if required, the consent of such data subjects shall be obtained prior to the sharing of their personal data; \n4.\tAll employees, agents, contractors, or other parties working on behalf of th']",True,0,1.0,9.392,,
 13,What is the purpose of the Data Retention Policy?,"It establishes guidelines for retaining and disposing records and data in line with legal, regulatory, operational, and business requirements.","Answer:
-The purpose of the Data Retention Policy is to ensure the secure and compliant storage of data within Kenya Aviation Limited.
+The purpose of the Data Retention Policy is to establish guidelines for the retention and disposal of records and data within Kenya Aviation Limited, in accordance with the Data Protection Act, 2019, and other applicable regulations.
 
 Citations:
-- Data Retention Policy - Kenya Aviation Limited Policy Corpus
+- Data Retention Policy - data_retention_policy.md
 
 Relevant Snippets:
-- ""The purpose of this policy is to ensure that all data stored by Kenya Aviation Limited is retained securely and in compliance with relevant laws and regulations."" 
-  (Source: Data Retention Policy - Kenya Aviation Limited Policy Corpus)",data_retention_policy.md,[],False,9.234039783477783,,
+- ""This Data Retention Policy establishes guidelines for the retention and disposal of records and data within Kenya Aviation Limited, in accordance with the Data Protection Act, 2019, and other applicable regulations."" 
+- ""This Policy also serves the purpose of aiding employees of the company in understanding their obligations in retaining electronic documents...""",data_retention_policy.md,"['data_retention_policy.md', 'data_retention_policy.md', 'data_retention_policy.md', 'data_retention_policy.md']","['4.\tQuality Department: Responsible for monitoring of this policy.\n4.3.2\tData Retention Periods\nWe may retain personal data for as long as it is necessary to fulfil the purpose for which\nit was collected, or as required or permitted by applicable laws. \nWe will cease to retain personal data, or remov', '4.\tQuality Department: Responsible for monitoring of this policy.\n4.3.2\tData Retention Periods\nWe may retain personal data for as long as it is necessary to fulfil the purpose for which\nit was collected, or as required or permitted by applicable laws. \nWe will cease to retain personal data, or remov', '4.\tQuality Department: Responsible for monitoring of this policy.\n4.3.2\tData Retention Periods\nWe may retain personal data for as long as it is necessary to fulfil the purpose for which\nit was collected, or as required or permitted by applicable laws. \nWe will cease to retain personal data, or remov', 'This Data Retention Policy establishes guidelines for the retention and disposal of records and data within Kenya Aviation Limited, in accordance with the Data Protection Act, 2019, and other applicable regulations. This policy ensures information is retained for appropriate durations to meet legal,']",True,0,0.5,9.704,,
 14,How should sensitive physical records be disposed of?,"They should be disposed of securely through shredding, secure incineration, or professional data destruction services.","Answer:
-Sensitive physical records should be disposed of by shredding or incineration.
+Sensitive physical records should be disposed of through shredding, secure incineration, or professional data destruction services.
 
 Citations:
-- Document Disposal Policy - Kenya Aviation Limited Policy Corpus (Document Disposal Policy.docx)
+- Data Retention Policy - data_retention_policy.md
 
 Relevant Snippets:
-- ""All sensitive physical records shall be disposed of by shredding or incineration to prevent unauthorized access."" 
-- ""The disposal of sensitive physical records shall be carried out in accordance with the procedures outlined in this policy.""",data_retention_policy.md,[],False,11.667353391647339,,
+- a. Physical Records: Shredding, secure incineration, or professional data destruction services.",data_retention_policy.md,"['data_retention_policy.md', 'data_retention_policy.md', 'data_retention_policy.md', 'data_subject_request_procedures.md']","['a.\tPhysical Records: Shredding, secure incineration, or professional data destruction services.\nb.\tElectronic Records: Secure deletion, data wiping, physical destruction of storage media or and ensuring that backup tapes are destroyed/overwritten.\n4.\tData Breach Considerations: In the event of a dat', 'a.\tPhysical Records: Shredding, secure incineration, or professional data destruction services.\nb.\tElectronic Records: Secure deletion, data wiping, physical destruction of storage media or and ensuring that backup tapes are destroyed/overwritten.\n4.\tData Breach Considerations: In the event of a dat', 'a.\tPhysical Records: Shredding, secure incineration, or professional data destruction services.\nb.\tElectronic Records: Secure deletion, data wiping, physical destruction of storage media or and ensuring that backup tapes are destroyed/overwritten.\n4.\tData Breach Considerations: In the event of a dat', 'b)\tEnsure there are no overriding legal or operational requirements to retain the data (e.g., legal retention periods).\n3)\tData Erasure: \na)\tDelete all applicable personal data from internal systems, databases, and archives.\nb)\tNotify all relevant third parties to erase the data from their systems.\n']",True,0,1.0,8.934,,
 15,What must third-party processors do if they experience a breach?,They must immediately notify Kenya Aviation Limited of any data breaches or incidents of non-compliance.,"Answer:
-Third-party processors must notify Kenya Aviation Limited immediately if they experience a breach.
+Third-party processors must not be explicitly instructed on what to do in case of a breach within the provided policy context.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Policy Manual (Section 5.3)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""In the event of a data breach, the third-party processor shall notify Kenya Aviation Limited immediately."" 
-  - Data Protection Policy - Kenya Aviation Limited Policy Manual (Section 5.3)",data_protection_policy.md,[],False,11.327758073806763,,
+- There is no mention of breach procedures in the provided policy context.",data_protection_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['1.8.3\tUse of Third Party Processors\nKenya Aviation Limited may engage external processors for certain data processing activities. We follow strict guidelines and procedures when establishing business relationships with third-party service providers, particularly concerning vendor selection and priva', '1.8.3\tUse of Third Party Processors\nKenya Aviation Limited may engage external processors for certain data processing activities. We follow strict guidelines and procedures when establishing business relationships with third-party service providers, particularly concerning vendor selection and priva', '1.8.3\tUse of Third Party Processors\nKenya Aviation Limited may engage external processors for certain data processing activities. We follow strict guidelines and procedures when establishing business relationships with third-party service providers, particularly concerning vendor selection and priva', 'Our contracts with third-party processors include, but are not limited to, the following key obligations:\n1.\tProcessing on Documented Instructions: The processor is required to process personal data solely based on Kenya Aviation Limited’s documented instructions.\n2.\tTransfers to Third Countries: Th']",True,0,0.0,9.146,,
 16,What must be done before engaging a third-party processor?,"The company must ensure the processor is suitable, competent, capable, and where possible enter into a controller and processor agreement.","Answer:
-Before engaging a third-party processor, a risk assessment must be conducted to ensure that the third-party processor can meet the required standards and security measures.
+Before engaging a third-party processor, Kenya Aviation Limited must ensure that they are suitable, competent, and capable of performing the required tasks. This involves obtaining all necessary information to verify that the processor is adequate and effective for the assignment.
 
 Citations:
-- Third-Party Processors Policy - Kenya Aviation Limited Policy Manual (Section 4.2)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""Prior to engaging a third-party processor, a risk assessment must be conducted to ensure that the third-party processor can meet the required standards and security measures."" 
-  (Source: Kenya Aviation Limited Policy Manual, Section 4.2)",data_protection_policy.md,[],False,11.672101020812988,,
+- ""Before engaging any processor, we ensure that they are suitable, competent, and capable of performing the required tasks. This involves obtaining all necessary information to verify that the processor is adequate and effective for the assignment."" 
+  (Data Protection Policy - data_protection_policy.md)",data_protection_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['1.8.3\tUse of Third Party Processors\nKenya Aviation Limited may engage external processors for certain data processing activities. We follow strict guidelines and procedures when establishing business relationships with third-party service providers, particularly concerning vendor selection and priva', '1.8.3\tUse of Third Party Processors\nKenya Aviation Limited may engage external processors for certain data processing activities. We follow strict guidelines and procedures when establishing business relationships with third-party service providers, particularly concerning vendor selection and priva', '1.8.3\tUse of Third Party Processors\nKenya Aviation Limited may engage external processors for certain data processing activities. We follow strict guidelines and procedures when establishing business relationships with third-party service providers, particularly concerning vendor selection and priva', 'Our contracts with third-party processors include, but are not limited to, the following key obligations:\n1.\tProcessing on Documented Instructions: The processor is required to process personal data solely based on Kenya Aviation Limited’s documented instructions.\n2.\tTransfers to Third Countries: Th']",True,0,0.5,8.595,,
 17,When should a DPIA be conducted?,"A DPIA should be conducted for high-risk processing, major system or business changes involving personal data, automated processing, large-scale sensitive data processing, or systematic monitoring.","Answer:
-A Data Protection Impact Assessment (DPIA) should be conducted when a new project or system is proposed that is likely to result in a high risk to the rights and freedoms of data subjects.
+A DPIA must be conducted before any large-scale Processing of Sensitive Categories of Personal Data, and large-scale, systematic monitoring of a publicly accessible area, as well as before any Automated Processing (including profiling) or ADM activities are undertaken.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Policy Manual (DPO-001)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""A DPIA should be conducted for any new project or system that is likely to result in a high risk to the rights and freedoms of data subjects. This includes, but is not limited to, projects that involve the processing of sensitive personal data, or projects that involve the use of new technologies that have the potential to result in a high risk to the rights and freedoms of data subjects."" (DPO-001, Page 12)",data_protection_policy.md,[],False,9.82990312576294,,
+- A DPIA must include: 
+  •	a description of the Processing, its purposes and the Controller's legitimate interests if appropriate; 
+  •	an assessment of the necessity and proportionality of the Processing in relation to its purpose; 
+  •	an assessment of the risk to individuals; and 
+  •	the risk mitigation measures in place and demonstration of compliance.
+- A DPIA must be carried out before any Automated Processing (including profiling) or ADM activities are undertaken.",data_protection_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","[""•\tlarge-scale Processing of Sensitive Categories of Personal Data; and \n•\tlarge-scale, systematic monitoring of a publicly accessible area.\nA DPIA must include:\n•\ta description of the Processing, its purposes and the Controller's legitimate interests if appropriate; \n•\tan assessment of the necessity"", ""•\tlarge-scale Processing of Sensitive Categories of Personal Data; and \n•\tlarge-scale, systematic monitoring of a publicly accessible area.\nA DPIA must include:\n•\ta description of the Processing, its purposes and the Controller's legitimate interests if appropriate; \n•\tan assessment of the necessity"", ""•\tlarge-scale Processing of Sensitive Categories of Personal Data; and \n•\tlarge-scale, systematic monitoring of a publicly accessible area.\nA DPIA must include:\n•\ta description of the Processing, its purposes and the Controller's legitimate interests if appropriate; \n•\tan assessment of the necessity"", 'A DPIA must be carried out before any Automated Processing (including profiling) or ADM activities are undertaken.\n1.7.2\tDirect marketing']",True,0,0.5,8.645,,
 18,What should a privacy notice include?,"It should include the controller and DPO details, processing purposes, lawful basis, data categories, recipients, transfers, retention periods, data subject rights, and complaint rights.","Answer:
-A privacy notice should include information about the types of personal data collected, the purposes for which the data is collected, and how the data will be used, shared, and protected.
+A Privacy Notice provided by Kenya Aviation Limited should include information on the identity of the Controller and DPO, how and why the company will use, Process, disclose, protect, and retain the Personal Data.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020)
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- ""The privacy notice shall include the following information: 
-  (a) The types of personal data collected; 
-  (b) The purposes for which the data is collected; 
-  (c) How the data will be used; 
-  (d) How the data will be shared; 
-  (e) How the data will be protected."" 
-  (Source: Section 5.2, Data Protection Policy - Kenya Aviation Limited Data Protection Policy Document (2020))",data_protection_policy.md,[],False,10.14992618560791,,
+- ""Whenever we collect Personal Data directly from Data Subjects, including for human resources or employment purposes, we must provide the Data Subject with all the information required by the DPA including the identity of the Controller and DPO, how and why we will use, Process, disclose, protect and retain that Personal Data through a Privacy Notice which must be presented when the Data Subject first provides the Personal Data."" 
+- ""Kenya Aviation Limited uses Privacy Notices, which are separate documents from our internal Data Protection Policy and are provided to all data subjects including... at the time we collect their personal data (or at the earliest possibility where that data is obtained indirectly).""",data_protection_policy.md,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['Whenever we collect Personal Data directly from Data Subjects, including for human resources or employment purposes, we must provide the Data Subject with all the information required by the DPA including the identity of the Controller and DPO, how and why we will use, Process, disclose, protect and', 'Whenever we collect Personal Data directly from Data Subjects, including for human resources or employment purposes, we must provide the Data Subject with all the information required by the DPA including the identity of the Controller and DPO, how and why we will use, Process, disclose, protect and', 'Whenever we collect Personal Data directly from Data Subjects, including for human resources or employment purposes, we must provide the Data Subject with all the information required by the DPA including the identity of the Controller and DPO, how and why we will use, Process, disclose, protect and', 'Kenya Aviation Limited uses Privacy Notices, which are separate documents from our internal Data Protection Policy and are provided to all data subjects including job candidates, employees, contractors, sub-contractors, Kenya Aviation Limited’s website visitors, physical site visitors, customers, su']",True,0,0.5,9.413,,
 19,What should happen when a data subject withdraws consent?,"Processing activities based on that consent should stop, relevant departments and third parties should be notified, and records updated.","Answer:
-When a data subject withdraws consent, the data controller shall cease to process the personal data and take reasonable steps to delete or anonymize the data.
+When a data subject withdraws consent, it will not affect the lawfulness of any processing carried out before the withdrawal. However, it may affect the provision of certain products or services to the data subject.
 
 Citations:
-- Data Protection Policy - Kenya Aviation Limited Policy Corpus (KALPC-001)
+- Website Privacy Policy - website_privacy_policy.md
+- Customer Privacy Policy - customer_privacy_policy.md
 
 Relevant Snippets:
-- ""In the event of a data subject withdrawing consent, the data controller shall cease to process the personal data and take reasonable steps to delete or anonymize the data."" (KALPC-001, Section 5.3.2)
-- ""The data controller shall ensure that all personal data is processed in accordance with the principles of data protection, including the principle of consent."" (KALPC-001, Section 3.1)",data_subject_request_procedures.md,[],False,9.426885843276978,,
+- ""Withdraw consent at any time where we are relying on consent to process your personal data. However, this will not affect the lawfulness of any processing carried out before you withdraw your consent."" (Website Privacy Policy - website_privacy_policy.md)
+- ""Withdraw consent at any time where we are relying on consent to process your personal data. However, this will not affect the lawfulness of any processing carried out before you withdraw your consent."" (Customer Privacy Policy - customer_privacy_policy.md)",data_subject_request_procedures.md,"['website_privacy_policy.md', 'website_privacy_policy.md', 'website_privacy_policy.md', 'customer_privacy_policy.md']","['f.\tRequest the transfer of your personal data to you or to a third party. We will provide to you, or a third party you have chosen, your personal data in a structured, commonly used, machine-readable format. Note that this right only applies to automated information that you initially provided conse', 'f.\tRequest the transfer of your personal data to you or to a third party. We will provide to you, or a third party you have chosen, your personal data in a structured, commonly used, machine-readable format. Note that this right only applies to automated information that you initially provided conse', 'f.\tRequest the transfer of your personal data to you or to a third party. We will provide to you, or a third party you have chosen, your personal data in a structured, commonly used, machine-readable format. Note that this right only applies to automated information that you initially provided conse', 'n.\tRequest the transfer of your personal data to you or to a third party. We will provide to you, or a third party you have chosen, your personal data in a structured, commonly used, machine-readable format. Note that this right only applies to automated information that you initially provided conse']",False,0,0.0,11.163,,
 20,What happens if a question is outside the policy corpus?,The assistant should state that it can only answer based on the Kenya Aviation Limited data protection policy corpus.,"Answer:
-I can only answer based on the Kenya Aviation Limited policy corpus available to me. I could not find this information in the provided policy documents.
+If a question is outside the policy corpus, I will not be able to provide an answer based on the available policy documents.
 
 Citations:
-- None - [No policy title or source file provided]
+- Data Protection Policy - data_protection_policy.md
 
 Relevant Snippets:
-- None",,[],False,9.212214946746826,,
+- This Data Protection Policy (together with Related Policies and Privacy Guidelines) is an internal document and cannot be shared with third parties, clients or regulators without prior authorization from the DPO.",,"['data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md', 'data_protection_policy.md']","['Where you have a specific responsibility in connection with Processing such as capturing Consent, reporting a Personal Data Breach, conducting a DPIA as referenced in this Data Protection Policy or otherwise then you must comply with the Related Policies and Privacy Guidelines.  \nThis Data Protectio', 'Where you have a specific responsibility in connection with Processing such as capturing Consent, reporting a Personal Data Breach, conducting a DPIA as referenced in this Data Protection Policy or otherwise then you must comply with the Related Policies and Privacy Guidelines.  \nThis Data Protectio', 'Where you have a specific responsibility in connection with Processing such as capturing Consent, reporting a Personal Data Breach, conducting a DPIA as referenced in this Data Protection Policy or otherwise then you must comply with the Related Policies and Privacy Guidelines.  \nThis Data Protectio', 'This policy applies to all Company Personnel (""you"", ""your""). You must read, understand and comply with this policy when processing personal data on our behalf and attend training on its requirements. This policy sets out what we expect from you for the Company to comply with applicable law(s). Your']",False,0,0.5,9.538,,

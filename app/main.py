@@ -1,5 +1,8 @@
+import os
+
 from flask import Flask, request, jsonify, render_template_string, url_for
 from app.rag_pipeline import answer_question
+
 
 app = Flask(__name__)
 
@@ -23,7 +26,6 @@ HTML_TEMPLATE = """
 
         :root {
             --magenta: #E20177;
-            --deep-magenta: #B00065;
             --purple: #A9218E;
             --yellow: #FFDD00;
             --blue: #00AEEF;
@@ -81,18 +83,6 @@ HTML_TEMPLATE = """
             min-width: 0;
         }
 
-        .sidebar::before {
-            content: "";
-            position: absolute;
-            width: 240px;
-            height: 240px;
-            background: var(--yellow);
-            border-radius: 50%;
-            opacity: 0.08;
-            top: -90px;
-            left: -80px;
-        }
-
         .brand {
             padding: 24px 22px 18px;
             position: relative;
@@ -116,7 +106,6 @@ HTML_TEMPLATE = """
             align-items: center;
             justify-content: center;
             font-size: 23px;
-            box-shadow: 0 10px 25px rgba(255, 221, 0, 0.25);
             flex-shrink: 0;
         }
 
@@ -124,7 +113,6 @@ HTML_TEMPLATE = """
             font-family: 'Space Grotesk', sans-serif;
             font-size: 22px;
             font-weight: 700;
-            letter-spacing: -0.5px;
             color: white;
             white-space: nowrap;
             overflow: hidden;
@@ -154,18 +142,6 @@ HTML_TEMPLATE = """
                 radial-gradient(circle at top right, rgba(255, 221, 0, 0.22), transparent 28%),
                 radial-gradient(circle at bottom left, rgba(226, 1, 119, 0.22), transparent 35%),
                 linear-gradient(180deg, rgba(191, 232, 247, 0.94), rgba(255, 255, 255, 0.92));
-            box-shadow: inset 0 -18px 40px rgba(226, 1, 119, 0.18);
-        }
-
-        .mascot-card::after {
-            content: "";
-            position: absolute;
-            right: -40px;
-            bottom: -40px;
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            background: rgba(226, 1, 119, 0.16);
         }
 
         .speech {
@@ -179,7 +155,6 @@ HTML_TEMPLATE = """
             padding: 12px 13px;
             font-size: 12px;
             line-height: 1.35;
-            box-shadow: 0 8px 22px rgba(169, 33, 142, 0.3);
             z-index: 3;
         }
 
@@ -281,7 +256,6 @@ HTML_TEMPLATE = """
             height: 8px;
             background: var(--green);
             border-radius: 50%;
-            box-shadow: 0 0 0 4px rgba(166, 206, 57, 0.15);
         }
 
         .chat-main {
@@ -333,7 +307,6 @@ HTML_TEMPLATE = """
         .header-title h1 {
             font-family: 'Space Grotesk', sans-serif;
             font-size: 23px;
-            letter-spacing: -0.6px;
             color: var(--white);
             margin-bottom: 4px;
             white-space: nowrap;
@@ -369,20 +342,6 @@ HTML_TEMPLATE = """
             gap: 18px;
         }
 
-        .messages::-webkit-scrollbar,
-        .policy-list::-webkit-scrollbar,
-        .suggestions::-webkit-scrollbar {
-            width: 5px;
-            height: 4px;
-        }
-
-        .messages::-webkit-scrollbar-thumb,
-        .policy-list::-webkit-scrollbar-thumb,
-        .suggestions::-webkit-scrollbar-thumb {
-            background: rgba(255, 221, 0, 0.25);
-            border-radius: 999px;
-        }
-
         .welcome-panel {
             background:
                 linear-gradient(135deg, rgba(226, 1, 119, 0.18), rgba(169, 33, 142, 0.14)),
@@ -411,10 +370,8 @@ HTML_TEMPLATE = """
 
         .welcome-katibu-gif {
             width: 140px;
-            height: auto;
             object-fit: contain;
             justify-self: center;
-            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.25));
         }
 
         .msg-row {
@@ -489,7 +446,6 @@ HTML_TEMPLATE = """
             background: linear-gradient(135deg, var(--magenta), var(--purple));
             color: white;
             border-bottom-right-radius: 5px;
-            box-shadow: 0 12px 28px rgba(226, 1, 119, 0.24);
         }
 
         .msg-time {
@@ -535,7 +491,6 @@ HTML_TEMPLATE = """
             gap: 10px;
             overflow-x: auto;
             flex-shrink: 0;
-            -webkit-overflow-scrolling: touch;
         }
 
         .suggest-btn {
@@ -549,14 +504,7 @@ HTML_TEMPLATE = """
             font-family: 'DM Sans', sans-serif;
             font-size: 12px;
             font-weight: 700;
-            transition: 0.18s ease;
             flex-shrink: 0;
-        }
-
-        .suggest-btn:hover {
-            background: rgba(226, 1, 119, 0.22);
-            color: white;
-            border-color: rgba(226, 1, 119, 0.5);
         }
 
         .input-bar {
@@ -574,11 +522,6 @@ HTML_TEMPLATE = """
             border: 1px solid rgba(255, 221, 0, 0.25);
             border-radius: 20px;
             padding: 12px;
-        }
-
-        .input-wrap:focus-within {
-            border-color: var(--yellow);
-            box-shadow: 0 0 0 4px rgba(255, 221, 0, 0.08);
         }
 
         textarea {
@@ -611,12 +554,6 @@ HTML_TEMPLATE = """
             font-weight: 900;
             cursor: pointer;
             flex-shrink: 0;
-            box-shadow: 0 12px 24px rgba(255, 221, 0, 0.18);
-        }
-
-        .send-btn:hover {
-            transform: translateY(-1px);
-            opacity: 0.95;
         }
 
         .typing {
@@ -659,7 +596,6 @@ HTML_TEMPLATE = """
             }
         }
 
-        /* Tablet */
         @media (max-width: 1024px) {
             body {
                 padding: 14px;
@@ -670,17 +606,8 @@ HTML_TEMPLATE = """
                 grid-template-columns: 260px minmax(0, 1fr);
             }
 
-            .brand {
-                padding: 20px 18px 14px;
-            }
-
             .brand-name {
                 font-size: 18px;
-            }
-
-            .brand-tagline {
-                font-size: 10.5px;
-                padding-left: 52px;
             }
 
             .mascot-card {
@@ -699,16 +626,11 @@ HTML_TEMPLATE = """
                 font-size: 11px;
             }
 
-            .policy-item {
-                padding: 10px;
-            }
-
             .msg-body {
                 max-width: 84%;
             }
         }
 
-        /* Mobile */
         @media (max-width: 760px) {
             body {
                 padding: 0;
@@ -747,7 +669,6 @@ HTML_TEMPLATE = """
             .katibu-avatar img {
                 width: 56px;
                 height: 56px;
-                transform: translateY(7px);
             }
 
             .header-title h1 {
@@ -756,7 +677,6 @@ HTML_TEMPLATE = """
 
             .header-title p {
                 font-size: 11.5px;
-                line-height: 1.25;
             }
 
             .header-chip {
@@ -794,7 +714,6 @@ HTML_TEMPLATE = """
             .msg-avatar.ai img {
                 width: 42px;
                 height: 42px;
-                transform: translateY(6px);
             }
 
             .msg-body {
@@ -804,25 +723,10 @@ HTML_TEMPLATE = """
             .msg-bubble {
                 font-size: 13px;
                 padding: 11px 13px;
-                border-radius: 16px;
-            }
-
-            .source-card {
-                padding: 10px 12px;
-                border-radius: 14px;
-            }
-
-            .source-title {
-                font-size: 12px;
-            }
-
-            .source-item {
-                font-size: 11.5px;
             }
 
             .suggestions {
                 padding: 8px 14px 4px;
-                gap: 8px;
             }
 
             .suggest-btn {
@@ -834,37 +738,15 @@ HTML_TEMPLATE = """
                 padding: 12px 12px 14px;
             }
 
-            .input-wrap {
-                border-radius: 18px;
-                padding: 10px;
-            }
-
-            textarea {
-                font-size: 13px;
-            }
-
             .send-btn {
                 width: 38px;
                 height: 38px;
-                border-radius: 13px;
-                font-size: 16px;
             }
         }
 
-        /* Small phones */
         @media (max-width: 420px) {
             .chat-header {
                 padding: 12px;
-            }
-
-            .katibu-avatar {
-                width: 40px;
-                height: 40px;
-            }
-
-            .katibu-avatar img {
-                width: 52px;
-                height: 52px;
             }
 
             .header-title h1 {
@@ -877,10 +759,6 @@ HTML_TEMPLATE = """
 
             .messages {
                 padding: 12px 10px;
-            }
-
-            .welcome-panel {
-                padding: 14px;
             }
 
             .welcome-panel h2 {
@@ -898,16 +776,6 @@ HTML_TEMPLATE = """
             .msg-bubble {
                 font-size: 12.5px;
                 padding: 10px 12px;
-            }
-
-            .suggestions {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-
-            .suggest-btn {
-                font-size: 11px;
-                padding: 7px 10px;
             }
 
             .input-bar {
@@ -939,11 +807,7 @@ HTML_TEMPLATE = """
                     Hi, I’m <strong>Katibu</strong>. Ask me about your policies.
                 </div>
 
-                <img
-                    src="{{ katibu_gif_url }}"
-                    alt="Katibu waving hello"
-                    class="katibu-gif"
-                >
+                <img src="{{ katibu_gif_url }}" alt="Katibu waving hello" class="katibu-gif">
             </div>
 
             <div class="section-label">Policy Corpus</div>
@@ -1179,22 +1043,12 @@ Hello! Ask me a policy question and I’ll respond using the policy corpus, incl
 
                 const data = await response.json();
                 showTyping(false);
-
-                if (!response.ok) {
-                    addAIMessage({
-                        answer: data.error || "Something went wrong while processing your question.",
-                        citations: [],
-                        snippets: []
-                    });
-                    return;
-                }
-
                 addAIMessage(data);
 
             } catch (error) {
                 showTyping(false);
                 addAIMessage({
-                    answer: "I could not reach the PolicyPilot AI service. Please check that the Flask server is running.",
+                    answer: "I could not reach the PolicyPilot AI service. Please check the Flask server or Render logs.",
                     citations: [],
                     snippets: []
                 });
@@ -1223,13 +1077,11 @@ Hello! Ask me a policy question and I’ll respond using the policy corpus, incl
 
 @app.route("/", methods=["GET"])
 def home():
-    katibu_url = url_for("static", filename="katibu.png")
     katibu_gif_url = url_for("static", filename="media/katibu_bird_waving_hi.gif")
 
     return render_template_string(
         HTML_TEMPLATE,
-        katibu_url=katibu_url,
-        katibu_gif_url=katibu_gif_url
+        katibu_gif_url=katibu_gif_url,
     )
 
 
@@ -1239,10 +1091,31 @@ def chat():
     question = data.get("question", "").strip()
 
     if not question:
-        return jsonify({"error": "Question is required"}), 400
+        return jsonify({
+            "question": "",
+            "answer": "Please enter a policy question.",
+            "citations": [],
+            "snippets": [],
+            "error": "Question is required",
+        }), 400
 
-    result = answer_question(question)
-    return jsonify(result)
+    try:
+        result = answer_question(question)
+        return jsonify(result)
+
+    except Exception as error:
+        print("CHAT ENDPOINT ERROR:", repr(error))
+
+        return jsonify({
+            "question": question,
+            "answer": (
+                "PolicyPilot AI encountered a backend error while processing your question. "
+                "Please check the Render logs for details."
+            ),
+            "citations": [],
+            "snippets": [],
+            "error": str(error),
+        }), 500
 
 
 @app.route("/health", methods=["GET"])
@@ -1251,6 +1124,25 @@ def health():
         "status": "ok",
         "app": "PolicyPilot AI",
     })
+
+
+@app.route("/debug", methods=["GET"])
+def debug():
+    chroma_db_dir = os.getenv("CHROMA_DB_DIR", "chroma_db")
+
+    return jsonify({
+        "app": "PolicyPilot AI",
+        "groq_key_exists": bool(os.getenv("GROQ_API_KEY")),
+        "llm_model": os.getenv("LLM_MODEL"),
+        "data_dir": os.getenv("DATA_DIR"),
+        "chroma_db_dir": chroma_db_dir,
+        "chroma_db_exists": os.path.exists(chroma_db_dir),
+    })
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return "", 204
 
 
 if __name__ == "__main__":

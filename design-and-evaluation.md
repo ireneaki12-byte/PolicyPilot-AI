@@ -25,7 +25,7 @@ This structure was selected because the original document already contained dist
 
 ### Chunking
 
-The documents were chunked using a heading-aware recursive text splitter. This was chosen because policies are naturally structured using chapters, sections, and subsections.
+The documents were chunked using a heading-aware recursive text splitter. This was chosen because policies are naturally structured using chapters, sections and subsections.
 
 ### Embeddings
 
