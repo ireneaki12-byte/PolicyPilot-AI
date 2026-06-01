@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-PolicyPilot AI is a Retrieval-Augmented Generation application designed to answer questions about Kenya Aviation Limited’s data protection policy corpus. The corpus includes policies and procedures covering data protection principles, privacy notices, cookies, data retention, data subject rights, and data breach response.
+PolicyPilot AI is a Retrieval-Augmented Generation application designed to answer questions about Kenya Aviation Limited’s data protection policy corpus. The corpus includes policies and procedures covering data protection principles, privacy notices, cookies, data retention, data subject rights and data breach response.
 
 ## Corpus
 
@@ -41,7 +41,7 @@ The application uses top-k retrieval with k=4. This balances retrieval quality a
 
 ### Prompting
 
-The prompt instructs the LLM to answer only from retrieved policy context, cite the relevant source document, avoid legal advice, and refuse questions outside the corpus.
+The prompt instructs the LLM to answer only from retrieved policy context, cite the relevant source document, avoid legal advice and refuse questions outside the corpus.
 
 ## Evaluation
 
